@@ -8,88 +8,113 @@
   "whyVendored": "These six flows carry the behaviours the test suite asserts on, so the discriminating tests run in CI with no network and no tenant. tools/fetch_corpus.py retrieves the full 239-flow corpus for the opt-in deep tests.",
   "files": [
     {
-      "file": "AdminCapacityAlerts-108A99EF-B08C-EB11-A812-000D3A1F6308.json",
+      "file": "capacity-alerts.json",
       "upstreamPath": "CenterofExcellenceCoreComponentsTeams/SolutionPackage/Workflows/AdminCapacityAlerts-108A99EF-B08C-EB11-A812-000D3A1F6308.json",
       "sha256": "fac9a7c6d1f38313510c4286fcc91613f5ad341f41f63000d98d55487105012b",
       "bytes": 10381,
-      "why": "PAL102: body('Create_Close_To_Capacity') vs action 'Create_Close_to_Capacity'. Taken from the Teams solution, not Core Components: the two ship files with the same GUID and different contents, and only this one carries the mismatch."
+      "why": "PAL102: body('Create_Close_To_Capacity') vs action 'Create_Close_to_Capacity'. Taken from the Teams solution, not Core Components: the two ship files with the same GUID and different contents, and only this one carries the mismatch.",
+      "localFile": "capacity-alerts.json",
+      "upstreamFile": "AdminCapacityAlerts-108A99EF-B08C-EB11-A812-000D3A1F6308.json"
     },
     {
-      "file": "AdminCapacityAlerts-108A99EF-B08C-EB11-A812-000D3A1F6308.json.data.xml",
+      "file": "capacity-alerts.json.data.xml",
       "upstreamPath": "CenterofExcellenceCoreComponentsTeams/SolutionPackage/Workflows/AdminCapacityAlerts-108A99EF-B08C-EB11-A812-000D3A1F6308.json.data.xml",
       "sha256": "bd10d416b8a51e770c42241db93b536f9e8099bc5ebf032f8c3e52180094bb08",
       "bytes": 1633,
-      "why": "display-name sidecar for the flow above"
+      "why": "display-name sidecar for the flow above",
+      "localFile": "capacity-alerts.json.data.xml",
+      "upstreamFile": "AdminCapacityAlerts-108A99EF-B08C-EB11-A812-000D3A1F6308.json.data.xml"
     },
     {
-      "file": "AdminSyncTemplatev3CoESolutionMetadata-F67E1E35-4CD5-EC11-A7B5-0022482783B7.json",
+      "file": "sync-solution-metadata.json",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/AdminSyncTemplatev3CoESolutionMetadata-F67E1E35-4CD5-EC11-A7B5-0022482783B7.json",
       "sha256": "eee8318955cdd0c779a3ca96383f06c7b887462ee3c8aa3a9d89ef7c5a53a5b1",
       "bytes": 256193,
-      "why": "U+00A0 used as an argument separator in two concat() expressions"
+      "why": "U+00A0 used as an argument separator in two concat() expressions",
+      "localFile": "sync-solution-metadata.json",
+      "upstreamFile": "AdminSyncTemplatev3CoESolutionMetadata-F67E1E35-4CD5-EC11-A7B5-0022482783B7.json"
     },
     {
-      "file": "AdminSyncTemplatev3CoESolutionMetadata-F67E1E35-4CD5-EC11-A7B5-0022482783B7.json.data.xml",
+      "file": "sync-solution-metadata.json.data.xml",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/AdminSyncTemplatev3CoESolutionMetadata-F67E1E35-4CD5-EC11-A7B5-0022482783B7.json.data.xml",
       "sha256": "50d44c34086e2cd66163c36e26e8a41171a4e11060b7813f12d8360360050195",
       "bytes": 1905,
-      "why": "display-name sidecar for the flow above"
+      "why": "display-name sidecar for the flow above",
+      "localFile": "sync-solution-metadata.json.data.xml",
+      "upstreamFile": "AdminSyncTemplatev3CoESolutionMetadata-F67E1E35-4CD5-EC11-A7B5-0022482783B7.json.data.xml"
     },
     {
-      "file": "CLEANUPHELPER-CloudFlowUserSharedWith-5F164DC7-8D1A-EF11-840A-000D3A322446.json",
+      "file": "cleanup-cloudflow-shared.json",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/CLEANUPHELPER-CloudFlowUserSharedWith-5F164DC7-8D1A-EF11-840A-000D3A322446.json",
       "sha256": "2acd296b129876d093f9b1060c0e051a3559bb89a65eae8016abc93a7ad1ef8f",
       "bytes": 119079,
-      "why": "items() case mismatch, plus a Foreach nested five containers deep"
+      "why": "items() case mismatch, plus a Foreach nested five containers deep",
+      "localFile": "cleanup-cloudflow-shared.json",
+      "upstreamFile": "CLEANUPHELPER-CloudFlowUserSharedWith-5F164DC7-8D1A-EF11-840A-000D3A322446.json"
     },
     {
-      "file": "CLEANUPHELPER-CloudFlowUserSharedWith-5F164DC7-8D1A-EF11-840A-000D3A322446.json.data.xml",
+      "file": "cleanup-cloudflow-shared.json.data.xml",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/CLEANUPHELPER-CloudFlowUserSharedWith-5F164DC7-8D1A-EF11-840A-000D3A322446.json.data.xml",
       "sha256": "9654f0d49158f5a8cd916ccdf813e7fcf47e9ac4b5d555d3a1cd9c43cfec27b9",
       "bytes": 1345,
-      "why": "display-name sidecar for the flow above"
+      "why": "display-name sidecar for the flow above",
+      "localFile": "cleanup-cloudflow-shared.json.data.xml",
+      "upstreamFile": "CLEANUPHELPER-CloudFlowUserSharedWith-5F164DC7-8D1A-EF11-840A-000D3A322446.json.data.xml"
     },
     {
-      "file": "CLEANUPHELPER-SolutionObjects-8A51E503-8EB5-EE11-A569-000D3A3411D9.json",
+      "file": "cleanup-solution-objects.json",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/CLEANUPHELPER-SolutionObjects-8A51E503-8EB5-EE11-A569-000D3A3411D9.json",
       "sha256": "23bcab9e747a1fe3c623280497fda6bf7b79b9a538427faf3a7b930e215263e3",
       "bytes": 57801,
-      "why": "PAL102: five outputs() references differing from their action only in case"
+      "why": "PAL102: five outputs() references differing from their action only in case",
+      "localFile": "cleanup-solution-objects.json",
+      "upstreamFile": "CLEANUPHELPER-SolutionObjects-8A51E503-8EB5-EE11-A569-000D3A3411D9.json"
     },
     {
-      "file": "CLEANUPHELPER-SolutionObjects-8A51E503-8EB5-EE11-A569-000D3A3411D9.json.data.xml",
+      "file": "cleanup-solution-objects.json.data.xml",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/CLEANUPHELPER-SolutionObjects-8A51E503-8EB5-EE11-A569-000D3A3411D9.json.data.xml",
       "sha256": "33e274f219b4705c0b08d4ac72a86444d44aa39a6e5b75bb6b83012e4beb1d03",
       "bytes": 1621,
-      "why": "display-name sidecar for the flow above"
+      "why": "display-name sidecar for the flow above",
+      "localFile": "cleanup-solution-objects.json.data.xml",
+      "upstreamFile": "CLEANUPHELPER-SolutionObjects-8A51E503-8EB5-EE11-A569-000D3A3411D9.json.data.xml"
     },
     {
-      "file": "SYNCHELPER-Apps-B677AA25-8DE4-ED11-A7C7-0022480813FF.json",
+      "file": "synchelper-apps.json",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/SYNCHELPER-Apps-B677AA25-8DE4-ED11-A7C7-0022480813FF.json",
       "sha256": "b6a9be2d977f75a862e722065eb0d9e682f87d2e420e5162c4d1626a703ece2a",
       "bytes": 104328,
-      "why": "PAL102: outputs('Get_app_from_Inventory') vs action 'Get_App_from_Inventory'"
+      "why": "PAL102: outputs('Get_app_from_Inventory') vs action 'Get_App_from_Inventory'",
+      "localFile": "synchelper-apps.json",
+      "upstreamFile": "SYNCHELPER-Apps-B677AA25-8DE4-ED11-A7C7-0022480813FF.json"
     },
     {
-      "file": "SYNCHELPER-Apps-B677AA25-8DE4-ED11-A7C7-0022480813FF.json.data.xml",
+      "file": "synchelper-apps.json.data.xml",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/SYNCHELPER-Apps-B677AA25-8DE4-ED11-A7C7-0022480813FF.json.data.xml",
       "sha256": "b5990d9903d6922e92faedf4695e0b2a81186cf238eb3054ae8920eb765eeebe",
       "bytes": 1500,
-      "why": "display-name sidecar for the flow above"
+      "why": "display-name sidecar for the flow above",
+      "localFile": "synchelper-apps.json.data.xml",
+      "upstreamFile": "SYNCHELPER-Apps-B677AA25-8DE4-ED11-A7C7-0022480813FF.json.data.xml"
     },
     {
-      "file": "SetupWizardUpdateDataflowEnvironment-1AFCAB58-1DB1-ED11-83FE-0022480819D7.json",
+      "file": "setupwizard-dataflow-env.json",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/SetupWizardUpdateDataflowEnvironment-1AFCAB58-1DB1-ED11-83FE-0022480819D7.json",
       "sha256": "ad933e65980a3d626469b12f3cb66fbc7d4d709bdbd6df0396d168c084d829b4",
       "bytes": 14068,
-      "why": "U+00A0 used as an argument separator in one concat() expression"
+      "why": "U+00A0 used as an argument separator in one concat() expression",
+      "localFile": "setupwizard-dataflow-env.json",
+      "upstreamFile": "SetupWizardUpdateDataflowEnvironment-1AFCAB58-1DB1-ED11-83FE-0022480819D7.json"
     },
     {
-      "file": "SetupWizardUpdateDataflowEnvironment-1AFCAB58-1DB1-ED11-83FE-0022480819D7.json.data.xml",
+      "file": "setupwizard-dataflow-env.json.data.xml",
       "upstreamPath": "CenterofExcellenceCoreComponents/SolutionPackage/src/Workflows/SetupWizardUpdateDataflowEnvironment-1AFCAB58-1DB1-ED11-83FE-0022480819D7.json.data.xml",
       "sha256": "2c41e88c89483158f64f8143b9f110cad4863b05e35427bbc3eafd536505a9df",
       "bytes": 1812,
-      "why": "display-name sidecar for the flow above"
+      "why": "display-name sidecar for the flow above",
+      "localFile": "setupwizard-dataflow-env.json.data.xml",
+      "upstreamFile": "SetupWizardUpdateDataflowEnvironment-1AFCAB58-1DB1-ED11-83FE-0022480819D7.json.data.xml"
     }
-  ]
+  ],
+  "naming": "Local filenames are shortened. The upstream name is recorded as upstreamFile and the full upstream path as upstreamPath. The GUID suffix is dropped because a path of fixtures/vendor/coe/Workflows/<89-character-name> plus a deep clone directory exceeds the default Windows path limit, which makes the repository fail to check out rather than fail a test."
 }
