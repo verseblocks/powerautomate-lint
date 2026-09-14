@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "powerautomate-lint"
+version = "0.1.0"
+description = "Offline linter and expression parser for Power Automate cloud flows. No tenant, no credentials, no network."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "VerseBlocks", email = "hello@verseblocks.com" }]
+keywords = [
+    "power-automate", "powerplatform", "dataverse", "logic-apps",
+    "linter", "sarif", "workflow-definition-language", "alm",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Quality Assurance",
+    "Typing :: Typed",
+]
+# Runtime dependencies: none, on purpose. The expression parser is importable
+# into any project without pulling a tree behind it.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/verseblocks/powerautomate-lint"
+Repository = "https://github.com/verseblocks/powerautomate-lint"
+Issues = "https://github.com/verseblocks/powerautomate-lint/issues"
+
+[project.scripts]
+palint = "powerautomate_lint.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+markers = [
+    "corpus: opt-in tests over the full 239-flow corpus (needs tools/fetch_corpus.py)",
+]
+
+[tool.ruff]
+line-length = 96
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src/powerautomate_lint/expression"]
+strict = true

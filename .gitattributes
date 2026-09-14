@@ -1,0 +1,11 @@
+# Default: normalise line endings in text we own.
+* text=auto eol=lf
+
+# Vendored fixtures are upstream bytes, and the test suite asserts their
+# SHA-256 against fixtures/vendor/coe/MANIFEST.json on every run. Any end-of-line
+# conversion changes those bytes, so a fresh clone on Windows would fail the
+# provenance test through no fault of the code. Treat them as binary.
+fixtures/vendor/** -text -diff
+
+# Committed as-is so the exact bytes the parser sees are the bytes in the repo.
+*.json.data.xml -text

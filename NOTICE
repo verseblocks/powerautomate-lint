@@ -1,0 +1,43 @@
+powerautomate-lint
+Copyright (c) 2026 VerseBlocks LLC
+Licensed under the MIT License. See LICENSE.
+
+---
+
+This product includes test fixtures from the Microsoft Power Platform Center of
+Excellence (CoE) Starter Kit.
+
+    https://github.com/microsoft/coe-starter-kit
+    Commit d4ceb8b718883d841ef9680dc344494ebd68d3b7
+    Copyright (c) Microsoft Corporation.
+    Licensed under the MIT License.
+
+The files are in fixtures/vendor/coe/Workflows/ and are unmodified upstream
+bytes; fixtures/vendor/coe/MANIFEST.json records each file's upstream path and
+SHA-256, and the test suite verifies those hashes on every run.
+
+GitHub reports the CoE Starter Kit's licence as NOASSERTION. That is an artefact
+of its LICENSE file being indented, which defeats GitHub's licence detector. The
+file is the MIT licence, reproduced below verbatim from that commit.
+
+    MIT License
+    Microsoft Power Platform Center of Excellence (CoE) Starter Kit
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.

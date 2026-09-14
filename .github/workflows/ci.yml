@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.11", "3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      # Long paths must be enabled before checkout on Windows or the corpus
+      # fetch in the deep-test job fails with "Filename too long".
+      - name: Enable git long paths
+        if: runner.os == 'Windows'
+        run: git config --global core.longpaths true
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e ".[dev]"
+
+      - name: Tests
+        run: pytest
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Types
+        run: mypy
+
+  dogfood:
+    # Runs palint over its own vendored fixtures and publishes the SARIF, so the
+    # repository's code scanning tab shows what the tool actually reports.
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Scan the vendored corpus
+        run: palint fixtures/vendor/coe --format sarif -o palint.sarif --fail-on none
+      - uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: palint.sarif
+          category: palint
